@@ -1,0 +1,10 @@
+services:
+  - type: static_site
+    name: kurban-bajrami-2026
+    branch: main
+    buildCommand: ""
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

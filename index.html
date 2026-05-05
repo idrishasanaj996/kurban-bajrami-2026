@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071b13" />
+  <title>Kurban Bajrami 2026 — Rezervim modern hap pas hapi</title>
+  <meta name="description" content="Rezervoni kurbanin për Bajram 2026 në mënyrë të thjeshtë: zgjidhni vendin, llojin, shërbimin dhe dërgoni porosinë në WhatsApp." />
+  <style>
+    :root{
+      --bg:#f6f1e7;
+      --bg-2:#ebe2d1;
+      --ink:#092219;
+      --muted:#587064;
+      --deep:#061711;
+      --green:#0b4a35;
+      --green-2:#113f31;
+      --gold:#c7a34e;
+      --gold-2:#e3c97d;
+      --cream:#fffaf0;
+      --line:rgba(9,34,25,.14);
+      --shadow:0 34px 100px rgba(8,31,23,.20);
+      --radius:28px;
+      --safe:max(20px, env(safe-area-inset-left));
+      --step:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth; overflow-x:hidden; background:var(--bg)}
+    body{margin:0; color:var(--ink); background:
+      radial-gradient(circle at 80% 8%, rgba(199,163,78,.22), transparent 34rem),
+      linear-gradient(180deg, #fbf6eb 0%, var(--bg) 52%, #efe4d0 100%);
+      overflow-x:hidden;
+    }
+    body::before{content:""; position:fixed; inset:0; pointer-events:none; opacity:.28; z-index:0; background-image:
+      linear-gradient(90deg, rgba(9,34,25,.055) 1px, transparent 1px),
+      linear-gradient(rgba(9,34,25,.04) 1px, transparent 1px);
+      background-size:72px 72px; mask-image:linear-gradient(to bottom, #000 0, transparent 78%);
+    }
+    a{color:inherit; text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .page{position:relative; z-index:1}
+    .nav{position:fixed; top:14px; left:50%; transform:translateX(-50%); z-index:30; width:min(1120px, calc(100vw - 28px)); display:flex; align-items:center; justify-content:space-between; gap:14px; padding:10px; border:1px solid rgba(255,255,255,.35); border-radius:999px; background:rgba(250,246,236,.78); backdrop-filter:blur(20px); box-shadow:0 14px 50px rgba(6,23,17,.12)}
+    .brand{display:flex; align-items:center; gap:10px; padding:0 8px 0 4px; font-weight:800; letter-spacing:-.04em}
+    .mark{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg, var(--deep), var(--green)); display:grid; place-items:center; color:var(--gold-2); box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+    .mark svg{width:22px; height:22px}
+    .navlinks{display:flex; gap:4px; align-items:center; color:rgba(9,34,25,.68); font-size:14px; font-weight:650}
+    .navlinks a{padding:10px 13px; border-radius:999px}
+    .navlinks a:hover{background:rgba(9,34,25,.06); color:var(--ink)}
+    .navcta{padding:12px 16px; border-radius:999px; color:#fff; background:var(--deep); font-weight:780; box-shadow:0 14px 30px rgba(6,23,17,.2)}
+
+    .hero{min-height:100svh; display:grid; align-items:center; padding:120px var(--safe) 74px}
+    .hero-inner{width:min(1180px, 100%); margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(360px,.86fr); gap:54px; align-items:center}
+    .eyebrow{display:inline-flex; align-items:center; gap:10px; width:max-content; max-width:100%; padding:9px 13px; border:1px solid rgba(199,163,78,.38); border-radius:999px; background:rgba(255,250,240,.7); color:#6e5a27; font-size:13px; font-weight:760; letter-spacing:.08em; text-transform:uppercase}
+    .eyebrow::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 7px rgba(199,163,78,.15)}
+    h1{margin:22px 0 18px; max-width:760px; font-size:clamp(56px, 8vw, 124px); line-height:.84; letter-spacing:-.085em; text-wrap:balance}
+    .gold{color:var(--gold); text-shadow:0 1px 0 rgba(255,255,255,.35)}
+    .lead{max-width:640px; margin:0; font-size:clamp(18px, 2.2vw, 25px); line-height:1.36; color:var(--muted); letter-spacing:-.025em}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px}
+    .btn{min-height:52px; display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:999px; padding:0 20px; border:1px solid transparent; font-weight:780; cursor:pointer; transition:transform .25s ease, box-shadow .25s ease, background .25s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary{color:#fff; background:linear-gradient(135deg, var(--deep), #0d4b36); box-shadow:0 22px 46px rgba(7,36,26,.24)}
+    .btn.secondary{color:var(--ink); background:rgba(255,250,240,.72); border-color:var(--line)}
+    .trust-row{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:10px; margin-top:34px; max-width:670px}
+    .trust{border:1px solid var(--line); border-radius:22px; padding:16px; background:rgba(255,250,240,.58); backdrop-filter:blur(10px)}
+    .trust b{display:block; font-size:15px; letter-spacing:-.02em}.trust span{display:block; margin-top:5px; color:var(--muted); font-size:13px; line-height:1.35}
+
+    .visual{position:relative; min-height:660px; perspective:1200px}
+    .orb{position:absolute; width:520px; height:520px; right:0; top:44px; border-radius:50%; background:radial-gradient(circle at 38% 26%, #fff8df 0 4%, #dec27b 5% 15%, #f8edd1 16% 17%, #9f7a2d 18% 19%, transparent 20%), radial-gradient(circle at 50% 48%, #f2dec0 0 8%, #c5b8a0 9% 13%, #fff2d4 14% 15%, #b9923f 16% 17%, transparent 18%), linear-gradient(140deg, #fff6df, #e1c070 42%, #69501f 64%, #123827); box-shadow:var(--shadow); transform:rotateX(8deg) rotateY(-10deg) translateY(calc(var(--scroll,0) * -40px)); overflow:hidden}
+    .orb::before{content:""; position:absolute; inset:12%; border-radius:50%; background:
+      radial-gradient(ellipse at 50% 37%, #fff8ed 0 4%, transparent 5%),
+      radial-gradient(ellipse at 40% 34%, #efe1ca 0 7%, transparent 8%),
+      radial-gradient(ellipse at 62% 34%, #efe1ca 0 7%, transparent 8%),
+      radial-gradient(ellipse at 50% 58%, #dcc5a2 0 20%, transparent 21%);
+      filter:blur(.2px); opacity:.86}
+    .orb::after{content:""; position:absolute; inset:-2px; border-radius:50%; border:1px solid rgba(255,255,255,.62); box-shadow:inset 0 0 0 1px rgba(6,23,17,.09)}
+    .flag{position:absolute; right:18px; top:18px; width:220px; height:126px; border-radius:18px; overflow:hidden; transform:rotate(4deg); box-shadow:0 18px 44px rgba(6,23,17,.2)}
+    .flag i{position:absolute; inset:0; background:linear-gradient(90deg,#d92020 0 34%, #0d6b36 34% 100%)}
+    .flag i::before{content:""; position:absolute; left:34%; right:0; top:33.3%; height:33.3%; background:#e7cc35}.flag i::after{content:"★"; position:absolute; left:34px; top:30px; color:white; font-size:44px; line-height:1}
+    .price{position:absolute; left:0; top:360px; width:190px; height:190px; border-radius:50%; display:grid; place-items:center; background:var(--deep); color:#fff; border:2px solid var(--gold); box-shadow:0 24px 70px rgba(6,23,17,.34); transform:translateY(calc(var(--scroll,0) * 55px))}
+    .price strong{display:block; font-size:60px; line-height:.8; letter-spacing:-.07em}.price span{display:block; margin-top:9px; color:var(--gold-2); font-weight:850; letter-spacing:.05em}
+    .panel{position:absolute; right:10px; bottom:22px; width:min(390px, 86vw); padding:24px; border-radius:30px; color:#fff; background:linear-gradient(145deg, rgba(6,23,17,.94), rgba(12,70,49,.92)); box-shadow:0 30px 80px rgba(6,23,17,.28); transform:translateY(calc(var(--scroll,0) * 26px))}
+    .panel h2{margin:0 0 12px; font-size:24px; letter-spacing:-.05em}.panel p{margin:0; color:rgba(255,255,255,.72); line-height:1.55}.panel-list{margin:18px 0 0; padding:0; list-style:none; display:grid; gap:11px}.panel-list li{display:flex; gap:10px; align-items:flex-start}.tick{width:20px; height:20px; flex:0 0 20px; border-radius:50%; background:rgba(227,201,125,.16); border:1px solid rgba(227,201,125,.42); position:relative}.tick::after{content:""; position:absolute; left:6px; top:4px; width:6px; height:10px; border:solid var(--gold-2); border-width:0 2px 2px 0; transform:rotate(45deg)}
+
+    section{padding:92px var(--safe)}
+    .section-inner{width:min(1120px,100%); margin:0 auto}.section-kicker{color:#846a2b; font-size:13px; text-transform:uppercase; letter-spacing:.12em; font-weight:850}.section-title{margin:12px 0 16px; font-size:clamp(36px,5vw,72px); line-height:.95; letter-spacing:-.07em; max-width:790px}.section-copy{max-width:700px; margin:0; font-size:18px; color:var(--muted); line-height:1.6}
+    .process-grid{margin-top:38px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}.step-card{position:relative; min-height:250px; padding:22px; border-radius:30px; background:rgba(255,250,240,.65); border:1px solid var(--line); overflow:hidden}.step-card::before{content:attr(data-step); position:absolute; right:18px; top:12px; font-size:84px; line-height:1; color:rgba(199,163,78,.18); font-weight:900; letter-spacing:-.08em}.step-card h3{margin:96px 0 9px; font-size:24px; letter-spacing:-.045em}.step-card p{margin:0; color:var(--muted); line-height:1.5; font-size:15px}
+
+    .builder{background:linear-gradient(180deg, rgba(6,23,17,.02), rgba(6,23,17,.08))}.builder-shell{margin-top:36px; display:grid; grid-template-columns:.86fr 1.14fr; gap:18px; align-items:start}.summary{position:sticky; top:100px; border-radius:34px; background:var(--deep); color:#fff; padding:26px; box-shadow:var(--shadow); overflow:hidden}.summary::before{content:""; position:absolute; inset:auto -20% -35% -20%; height:220px; background:radial-gradient(closest-side, rgba(199,163,78,.32), transparent 70%)}.summary > *{position:relative}.summary h3{margin:0; font-size:32px; letter-spacing:-.06em}.summary dl{display:grid; gap:12px; margin:24px 0}.summary-row{display:flex; justify-content:space-between; gap:14px; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,.12)}.summary dt{color:rgba(255,255,255,.58)}.summary dd{margin:0; text-align:right; font-weight:760}.whatsapp{width:100%; margin-top:14px; color:#071b13; background:linear-gradient(135deg, var(--gold-2), #f4e5a4)}
+    .wizard{border-radius:34px; background:rgba(255,250,240,.72); border:1px solid var(--line); padding:16px}.progress{height:8px; background:rgba(9,34,25,.08); border-radius:999px; overflow:hidden; margin:8px 8px 18px}.progress span{display:block; height:100%; width:calc((var(--active-step,1) / 4) * 100%); border-radius:999px; background:linear-gradient(90deg, var(--green), var(--gold)); transition:width .35s ease}.wizard-step{display:none; padding:12px}.wizard-step.active{display:block; animation:rise .35s ease both}@keyframes rise{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:none}}
+    .wizard-step h3{margin:0 0 18px; font-size:32px; letter-spacing:-.055em}.options{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px}.option{position:relative; text-align:left; min-height:118px; padding:18px; border-radius:24px; border:1px solid rgba(9,34,25,.13); background:rgba(255,255,255,.48); cursor:pointer; transition:.22s ease}.option:hover,.option.selected{border-color:rgba(199,163,78,.75); background:#fff8e9; transform:translateY(-2px); box-shadow:0 18px 40px rgba(9,34,25,.09)}.option b{display:block; font-size:19px; letter-spacing:-.035em}.option span{display:block; margin-top:7px; color:var(--muted); font-size:14px; line-height:1.35}.option small{position:absolute; right:16px; bottom:14px; color:#806524; font-weight:850}.form-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px}label{display:grid; gap:8px; color:rgba(9,34,25,.64); font-weight:700; font-size:13px}input,textarea{width:100%; border:1px solid rgba(9,34,25,.14); background:#fffdf7; color:var(--ink); border-radius:18px; padding:15px 16px; outline:none}textarea{min-height:112px; resize:vertical}.wizard-nav{display:flex; justify-content:space-between; gap:10px; margin-top:20px}.ghost{background:transparent; border-color:rgba(9,34,25,.16); color:var(--ink)}
+
+    .details{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:38px}.detail-card{padding:28px; min-height:260px; border-radius:34px; background:rgba(255,250,240,.6); border:1px solid var(--line)}.detail-card.dark{background:linear-gradient(145deg, #082017, #0d4b36); color:#fff}.detail-card h3{margin:0 0 14px; font-size:30px; letter-spacing:-.055em}.detail-card p,.detail-card li{color:var(--muted); line-height:1.6}.detail-card.dark p,.detail-card.dark li{color:rgba(255,255,255,.72)}.detail-card ul{margin:16px 0 0; padding-left:19px}
+    .contact-strip{margin-top:32px; border-radius:34px; padding:28px; background:var(--deep); color:#fff; display:flex; align-items:center; justify-content:space-between; gap:22px; box-shadow:var(--shadow)}.contact-strip h2{margin:0; font-size:clamp(28px,4vw,52px); letter-spacing:-.07em}.contact-strip p{margin:8px 0 0; color:rgba(255,255,255,.68)}
+    footer{padding:36px var(--safe) 110px; color:rgba(9,34,25,.58); text-align:center}
+    .mobile-bar{position:fixed; left:12px; right:12px; bottom:12px; z-index:40; display:none; gap:10px; padding:10px; border-radius:24px; background:rgba(250,246,236,.88); backdrop-filter:blur(18px); border:1px solid rgba(255,255,255,.44); box-shadow:0 18px 60px rgba(6,23,17,.18)}.mobile-bar .btn{flex:1; min-height:48px}
+
+    @media (max-width: 900px){
+      .nav{top:10px; width:calc(100vw - 20px)}.navlinks{display:none}.navcta{display:none}.brand{font-size:15px}.hero{padding-top:100px}.hero-inner{grid-template-columns:1fr; gap:28px}h1{font-size:clamp(54px,17vw,88px)}.visual{min-height:520px; order:-1}.orb{width:min(82vw,420px); height:min(82vw,420px); right:50%; transform:translateX(50%) rotateX(6deg) translateY(calc(var(--scroll,0) * -18px)); top:24px}.flag{width:168px; height:96px; right:calc(50% - 170px)}.price{width:148px; height:148px; top:295px; left:calc(50% - 196px)}.price strong{font-size:48px}.panel{right:50%; transform:translateX(50%); bottom:0}.trust-row,.process-grid,.builder-shell,.details{grid-template-columns:1fr}.summary{position:relative; top:auto; order:2}.process-grid{gap:12px}.step-card{min-height:210px}.step-card h3{margin-top:72px}.contact-strip{display:grid}.mobile-bar{display:flex}section{padding:76px var(--safe)}
+    }
+    @media (max-width: 540px){
+      .hero{padding-left:18px; padding-right:18px}.eyebrow{font-size:11px}.lead{font-size:18px}.hero-actions{display:grid}.btn{width:100%}.trust{padding:14px}.visual{min-height:475px}.flag{right:0; top:8px}.price{left:0; top:278px; width:132px; height:132px}.price strong{font-size:42px}.panel{width:calc(100vw - 34px); padding:20px; border-radius:26px}.panel h2{font-size:22px}.options,.form-grid{grid-template-columns:1fr}.wizard{padding:10px}.wizard-step h3{font-size:27px}.section-title{font-size:42px}.contact-strip{padding:22px; border-radius:28px}footer{padding-bottom:104px}
+    }
+    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important; animation:none!important; transition:none!important}.orb,.price,.panel{transform:none!important}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Navigation">
+      <a class="brand" href="#top" aria-label="Kurban Bajrami">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 14.4c4.4-1.5 9.6-1.5 14 0M8 10.2c2.4-1 5.6-1 8 0M12 4.5v15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        Kurban Bajrami 2026
+      </a>
+      <div class="navlinks">
+        <a href="#prozess">Procesi</a>
+        <a href="#rezervim">Rezervim</a>
+        <a href="#sherbime">Shërbimet</a>
+      </div>
+      <a class="navcta" href="#rezervim">Rezervo tani</a>
+    </nav>
+
+    <main id="top">
+      <header class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Rezervimet janë të hapura</span>
+            <h1>Kurban <span class="gold">Bajrami</span> 2026</h1>
+            <p class="lead">Një faqe moderne për shitje kurbani: zgjedhje hap pas hapi, informacion i qartë, kontakt direkt në WhatsApp dhe përvojë e optimizuar për telefon.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#rezervim">Zgjidh kurbanin</a>
+              <a class="btn secondary" href="https://wa.me/38349497435" target="_blank" rel="noreferrer">WhatsApp: +383 49 497 435</a>
+            </div>
+            <div class="trust-row" aria-label="Pikat kryesore">
+              <div class="trust"><b>Sipas rregullave islame</b><span>Therje hallall dhe me kujdes.</span></div>
+              <div class="trust"><b>Shpërndarje sipas dëshirës</b><span>Organizim i qartë për familje ose sadaka.</span></div>
+              <div class="trust"><b>Transport deri te ju</b><span>Marrëveshje e lehtë për lokacionin.</span></div>
+            </div>
+          </div>
+          <div class="visual" aria-label="Vizual kurbani">
+            <div class="orb" data-parallax="-36"></div>
+            <div class="flag" aria-hidden="true"><i></i></div>
+            <div class="price"><div><strong>130</strong><span>EURO</span></div></div>
+            <aside class="panel">
+              <h2>Shitja në Afrikë dhe Kosovë</h2>
+              <p>Zgjidhni vendin, shërbimin dhe kontaktin. Çdo porosi përgatitet për t'u dërguar shpejt në WhatsApp.</p>
+              <ul class="panel-list">
+                <li><span class="tick"></span><span>Dashi, dele ose qingja mbi 6 muaj</span></li>
+                <li><span class="tick"></span><span>Të mbajtura në natyrë dhe kushte të mira</span></li>
+                <li><span class="tick"></span><span>Organizatori: Fatlum Xhemajljaj</span></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </header>
+
+      <section id="prozess">
+        <div class="section-inner">
+          <span class="section-kicker">Proces i thjeshtë</span>
+          <h2 class="section-title">Nga zgjedhja deri te konfirmimi, pa konfuzion.</h2>
+          <p class="section-copy">Faqja e udhëheq klientin në mënyrë të qartë: fillimisht vendi, pastaj lloji i kurbanit, shërbimi dhe në fund të dhënat për kontakt.</p>
+          <div class="process-grid">
+            <article class="step-card" data-step="01"><h3>Zgjidh vendin</h3><p>Afrikë, Kosovë ose lokacion sipas marrëveshjes.</p></article>
+            <article class="step-card" data-step="02"><h3>Zgjidh kurbanin</h3><p>Dashi, dele ose qingj me përshkrim të qartë.</p></article>
+            <article class="step-card" data-step="03"><h3>Zgjidh shërbimin</h3><p>Therje hallall, shpërndarje ose transport deri te ju.</p></article>
+            <article class="step-card" data-step="04"><h3>Dërgo në WhatsApp</h3><p>Porosia përgatitet automatikisht dhe hapet direkt në WhatsApp.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="builder" id="rezervim">
+        <div class="section-inner">
+          <span class="section-kicker">Rezervim interaktiv</span>
+          <h2 class="section-title">Klienti zgjedh hap pas hapi.</h2>
+          <p class="section-copy">Ky konfigurator mund të lidhet më vonë edhe me pagesë online ose dashboard porosish. Tani dërgon porosinë e formatuar direkt në WhatsApp.</p>
+          <div class="builder-shell">
+            <aside class="summary" aria-live="polite">
+              <h3>Përmbledhje</h3>
+              <dl>
+                <div class="summary-row"><dt>Vendi</dt><dd id="sum-place">Afrikë</dd></div>
+                <div class="summary-row"><dt>Kurbani</dt><dd id="sum-animal">Dash</dd></div>
+                <div class="summary-row"><dt>Shërbimi</dt><dd id="sum-service">Therje hallall</dd></div>
+                <div class="summary-row"><dt>Çmimi</dt><dd id="sum-price">130 €</dd></div>
+              </dl>
+              <a id="whatsappLink" class="btn whatsapp" href="https://wa.me/38349497435" target="_blank" rel="noreferrer">Dërgo porosinë</a>
+            </aside>
+
+            <div class="wizard" style="--active-step:1">
+              <div class="progress"><span></span></div>
+              <div class="wizard-step active" data-step="1">
+                <h3>Ku dëshironi kurbanin?</h3>
+                <div class="options" data-key="place">
+                  <button class="option selected" data-value="Afrikë" data-price="130"><b>Afrikë</b><span>Organizim për shpërndarje si sadaka.</span><small>130 €</small></button>
+                  <button class="option" data-value="Abri e Epërme — Drenas" data-price="Sipas marrëveshjes"><b>Abri e Epërme — Drenas</b><span>Lokacion lokal, kontakt direkt.</span><small>Kontakt</small></button>
+                </div>
+              </div>
+              <div class="wizard-step" data-step="2">
+                <h3>Çfarë lloji?</h3>
+                <div class="options" data-key="animal">
+                  <button class="option selected" data-value="Dash"><b>Dash</b><span>Zgjedhja standarde për kurban.</span></button>
+                  <button class="option" data-value="Dele"><b>Dele</b><span>E rritur në kushte natyrale.</span></button>
+                  <button class="option" data-value="Qingj mbi 6 muaj"><b>Qingj mbi 6 muaj</b><span>Plotëson kushtet për kurban.</span></button>
+                  <button class="option" data-value="Më këshilloni"><b>Më këshilloni</b><span>Organizatori propozon opsionin më të mirë.</span></button>
+                </div>
+              </div>
+              <div class="wizard-step" data-step="3">
+                <h3>Cilin shërbim?</h3>
+                <div class="options" data-key="service">
+                  <button class="option selected" data-value="Therje hallall"><b>Therje hallall</b><span>Sipas rregullave islame.</span></button>
+                  <button class="option" data-value="Shpërndarje sipas dëshirës"><b>Shpërndarje</b><span>Për familje ose sadaka.</span></button>
+                  <button class="option" data-value="Transport deri te ju"><b>Transport</b><span>Organizohet sipas lokacionit.</span></button>
+                  <button class="option" data-value="Paketë e plotë"><b>Paketë e plotë</b><span>Therje, shpërndarje dhe konfirmim.</span></button>
+                </div>
+              </div>
+              <div class="wizard-step" data-step="4">
+                <h3>Të dhënat tuaja</h3>
+                <div class="form-grid">
+                  <label>Emri<input id="name" placeholder="Shkruani emrin" /></label>
+                  <label>Telefoni<input id="phone" placeholder="Numri juaj" /></label>
+                  <label style="grid-column:1/-1">Shënim<textarea id="note" placeholder="P.sh. për kë është kurbani, lokacioni, preferenca për shpërndarje"></textarea></label>
+                </div>
+              </div>
+              <div class="wizard-nav">
+                <button class="btn ghost" id="prevBtn" type="button">Mbrapa</button>
+                <button class="btn primary" id="nextBtn" type="button">Vazhdo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sherbime">
+        <div class="section-inner">
+          <span class="section-kicker">Informacion i qartë</span>
+          <h2 class="section-title">Çdo detaj që duhet para rezervimit.</h2>
+          <div class="details">
+            <article class="detail-card dark"><h3>Shërbime të përfshira</h3><ul><li>Prerje sipas rregullave islame</li><li>Shpërndarje sipas dëshirës</li><li>Transport deri te ju sipas marrëveshjes</li><li>Konfirmim i porosisë në WhatsApp</li></ul></article>
+            <article class="detail-card"><h3>Lokacion dhe kontakt</h3><p><strong>Vendi:</strong> Abri e Epërme — Drenas</p><p><strong>Kontakt:</strong> +383 49 497 435</p><p><strong>WhatsApp:</strong> +966 55 035 9806 ose +383 49 497 435</p></article>
+          </div>
+          <div class="contact-strip">
+            <div><h2>Gati për rezervime.</h2><p>Faqja është ndërtuar që klienti të porosisë shpejt nga telefoni.</p></div>
+            <a class="btn whatsapp" href="https://wa.me/38349497435" target="_blank" rel="noreferrer">Hap WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© Kurban Bajrami 2026 · Draft landingpage për shitje kurbani</footer>
+  </div>
+  <div class="mobile-bar" aria-label="Kontakt i shpejtë">
+    <a class="btn ghost" href="#rezervim">Zgjidh</a>
+    <a class="btn primary" href="https://wa.me/38349497435" target="_blank" rel="noreferrer">WhatsApp</a>
+  </div>
+
+  <script>
+    const state = { place:'Afrikë', animal:'Dash', service:'Therje hallall', price:'130 €' };
+    let step = 1;
+    const wizard = document.querySelector('.wizard');
+    const steps = [...document.querySelectorAll('.wizard-step')];
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const summary = {
+      place: document.getElementById('sum-place'),
+      animal: document.getElementById('sum-animal'),
+      service: document.getElementById('sum-service'),
+      price: document.getElementById('sum-price')
+    };
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const noteInput = document.getElementById('note');
+    const wa = document.getElementById('whatsappLink');
+    function updateSummary(){
+      summary.place.textContent = state.place;
+      summary.animal.textContent = state.animal;
+      summary.service.textContent = state.service;
+      summary.price.textContent = state.price;
+      const msg = `Selam, dua të rezervoj kurban për Bajram 2026.%0A%0AVendi: ${state.place}%0AKurbani: ${state.animal}%0AShërbimi: ${state.service}%0AÇmimi: ${state.price}%0AEmri: ${encodeURIComponent(nameInput.value || '-') }%0ATelefoni: ${encodeURIComponent(phoneInput.value || '-') }%0AShënim: ${encodeURIComponent(noteInput.value || '-') }`;
+      wa.href = `https://wa.me/38349497435?text=${msg}`;
+    }
+    function showStep(){
+      steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === step));
+      wizard.style.setProperty('--active-step', step);
+      prevBtn.style.visibility = step === 1 ? 'hidden' : 'visible';
+      nextBtn.textContent = step === 4 ? 'Dërgo në WhatsApp' : 'Vazhdo';
+    }
+    document.querySelectorAll('.options').forEach(group => {
+      group.addEventListener('click', e => {
+        const btn = e.target.closest('.option');
+        if(!btn) return;
+        group.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        btn.classList.add('selected');
+        const key = group.dataset.key;
+        state[key] = btn.dataset.value;
+        if(key === 'place') state.price = btn.dataset.price === '130' ? '130 €' : btn.dataset.price;
+        updateSummary();
+      });
+    });
+    nextBtn.addEventListener('click', () => {
+      if(step < 4){ step++; showStep(); return; }
+      updateSummary();
+      wa.click();
+    });
+    prevBtn.addEventListener('click', () => { if(step > 1){ step--; showStep(); }});
+    [nameInput, phoneInput, noteInput].forEach(el => el.addEventListener('input', updateSummary));
+    function onScroll(){
+      const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+      document.documentElement.style.setProperty('--scroll', (scrollY / max).toFixed(4));
+    }
+    addEventListener('scroll', onScroll, {passive:true});
+    addEventListener('pointermove', e => {
+      if(matchMedia('(max-width: 900px)').matches) return;
+      const x = (e.clientX / innerWidth - .5) * 10;
+      const y = (e.clientY / innerHeight - .5) * -8;
+      document.querySelector('.orb')?.style.setProperty('transform', `rotateX(${8+y}deg) rotateY(${-10+x}deg) translateY(calc(var(--scroll,0) * -40px))`);
+    }, {passive:true});
+    updateSummary();
+    showStep();
+    onScroll();
+  </script>
+</body>
+</html>
